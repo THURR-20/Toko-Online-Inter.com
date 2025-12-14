@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTER.COM</title>
+
+<style>
+:root{
+  --dark:#111;
+  --gray:#d9d9d9;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#e0e0e0;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:#111;
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+
+/* ================= GENERAL ================= */
+section{
+  padding:40px 20px;
+}
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+.btn{
+  display:block;
+  background:#111;
+  color:#fff;
+  padding:12px;
+  text-decoration:none;
+  margin-top:12px;
+  text-align:center;
+}
+
+/* ================= HOME ================= */
+.new-release{
+  background:#d9d9d9;
+  text-align:center;
+}
+.release-box{
+  background:#333;
+  color:#fff;
+  padding:30px;
+  max-width:900px;
+  margin:auto;
+}
+.release-box img{
+  width:100%;
+  max-height:300px;
+  object-fit:contain;
+}
+.dots span{
+  display:inline-block;
+  width:8px;
+  height:8px;
+  background:#aaa;
+  border-radius:50%;
+  margin:5px;
+}
+.dots .active{background:#000}
+
+/* ================= GRID ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+.card{
+  background:#eee;
+  padding:15px;
+  text-align:center;
+}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  background:#222;
+}
+.old{
+  text-decoration:line-through;
+  font-size:14px;
+}
+.price{
+  font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#222;
+  color:#ccc;
+}
+.footer-wrap{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+iframe{width:100%;height:250px;border:0}
+@media(max-width:700px){
+  .footer-wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav">
+    <strong>INTER.COM</strong>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<section id="home">
+
+  <!-- NEW RELEASE -->
+  <div class="new-release">
+    <h2>New Release</h2>
+    <div class="release-box">
+      <img src="Gearelec X2 Plus.png">
+      <h1>GEARELEC X2 PLUS</h1>
+      <a href="#catalog" class="btn">Catalog</a>
+      <div class="dots">
+        <span class="active"></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAST STOCK -->
+  <h2>LAST STOCKS!!!</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="EJEAS V4 PRO.png">
+      <h4>EJEAS V4 PRO</h4>
+      <small>Discount 10%</small>
+      <p class="old">Rp156.500</p>
+      <p class="price">Rp140.850</p>
+      <a class="btn" href="#">Go Go!!!</a>
+    </div>
+    <div class="card">
+      <img src="EJEAS V6 PRO.png">
+      <h4>EJEAS V6 PRO</h4>
+      <small>Discount 10%</small>
+      <p class="old">Rp215.000</p>
+      <p class="price">Rp193.500</p>
+      <a class="btn" href="#">Go Go!!!</a>
+    </div>
+  </div>
+
+  <!-- RECOMMEND -->
+  <h2>OUR RECOMMENDATION</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="Freedconn KY PRO.png">
+      <h4>Freedconn KY PRO</h4>
+      <p class="price">Rp290.000</p>
+      <a class="btn" href="#">Order Now</a>
+    </div>
+    <div class="card">
+      <img src="Smartcom Q30 Pro.png">
+      <h4>Smartcom Q30 Pro</h4>
+      <p class="price">Rp110.000</p>
+      <a class="btn" href="#">Order Now</a>
+    </div>
+    <div class="card">
+      <img src="Retouch X3 Pro.png">
+      <h4>Retouch X3 Pro</h4>
+      <p class="price">Rp325.000</p>
+      <a class="btn" href="#">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATALOG ================= -->
+<section id="catalog">
+  <h2>OUR COLLECTION</h2>
+  <div class="grid" id="catalogGrid"></div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<footer id="contact">
+  <div class="footer-wrap">
+    <div>
+      <h2>INTER.COM</h2>
+      <p>Email: fathurkr99@gmail.com</p>
+      <p>Whatsapp: 083894940220</p>
+      <p>Instagram: InterDotCom</p>
+      <p>Tiktok: InterCom</p>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Universitas+Pamulang&output=embed"></iframe>
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const WA = "https://api.whatsapp.com/send/?phone=6283894940220&text=";
+
+const produk = [
+  "Blaise ST1","Zacro Y80","Zacro E1","Zacro L1","Zacro S1 Pro",
+  "Parani A10 Boom","Y10-2X","G1 Ultra","Smartcom Y10","Bonkyo Y20",
+  "Blaise GT0","Blaise V2","Merodith Y10","Gearelec H6","Gearelec DK02",
+  "MB-100","Retouch X3 Pro","Gearelec C2","Miseni Y10","JT RH1",
+  "Gearelec X5","Gearelec X2 Plus","Gearelec X2","Smartcom Q30 Pro",
+  "Shade M1","EJEAS V6 PRO","EJEAS V4 PRO","Freedconn KY PRO",
+  "Freedconn R1 Pro","Freedconn R3"
+];
+
+const grid = document.getElementById("catalogGrid");
+
+produk.forEach(p=>{
+  const wa = WA + encodeURIComponent("Halo, saya ingin pesan "+p);
+  grid.innerHTML += `
+    <div class="card">
+      <img src="https://i.ibb.co/4JQzPf3/interkom.jpg">
+      <h4>${p}</h4>
+      <a class="btn" href="${wa}" target="_blank">Order via WhatsApp</a>
+    </div>`;
+});
+</script>
+
+</body>
+</html>
